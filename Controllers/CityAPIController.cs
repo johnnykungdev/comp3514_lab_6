@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using lab_5_province_city.Data;
 using lab_5_province_city.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace lab_5_province_city.controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("HealthPolicy")]
     public class CityAPIController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
